@@ -1,0 +1,13 @@
+$primary: #68A063;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+h1 {
+  color: #3C873A;
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 50%;
+  }
+}

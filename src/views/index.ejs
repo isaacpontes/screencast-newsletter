@@ -10,23 +10,44 @@
 </head>
 <body>
 
-  <h1>
-    Nodeletter
-  </h1>
+  <div class="container text-center">
 
-  <h2>Fique por dentro das novidades do Node.js!</h2>
+    <h1 class="my-5">
+      Nodeletter
+    </h1>
+  
+    <h2>
+      Fique por dentro das novidades do Node.js!
+    </h2>
+  
+    <p class="my-4">
+      Deixe seu email aqui embaixo e nós te enviaremos toda semana um compilado das coisas mais legais que rolaram no mundo do Node!
+    </p>
+  
+    <form method="post">
+  
+      <div class="row justify-content-center">
+        <div class="col col-auto mt-2">
+          <input
+            class="form-control form-control-lg"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Diz aí o seu e-mail principal"
+            required
+          />
+        </div>
 
-  <p>Deixe seu email aqui embaixo e nós te enviaremos toda semana um compilado das coisas mais legais que rolaram no mundo do Node!</p>
+        <div class="col col-auto mt-2">
+          <button class="btn btn-primary btn-lg" type="submit">
+            Me Inscrever
+          </button>
+        </div>
+      </div>
+  
+    </form>
 
-  <form method="post">
-
-    <input type="email" name="email" id="email" placeholder="Diz aí o seu e-mail principal">
-
-    <button type="submit">
-      Me Inscrever
-    </button>
-
-  </form>
+  </div>
 
 </body>
 </html>
