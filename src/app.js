@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const routes = require('./routes/index');
+const sequelize = require('./database');
 
 const app = express();
 
@@ -17,4 +18,8 @@ const PORT = process.env.PORT || 3333;
 
 app.listen(PORT, () => {
   console.log(`App is now running on port ${PORT}`);
+
+  sequelize.authenticate().then(() => {
+    console.log('Connected to PostgreSQL');
+  });
 });
