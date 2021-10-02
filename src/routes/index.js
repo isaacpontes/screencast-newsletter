@@ -1,4 +1,5 @@
 const express = require('express');
+const Subscriber = require('../models/Subscriber');
 
 const router = express.Router();
 
@@ -6,10 +7,12 @@ router.get('/', (req, res) => {
   return res.render('index');
 });
 
-router.post('/', (req, res) => {
-  return res.json({
-    hello: "Hello, world!"
-  });
+router.post('/', async (req, res) => {
+  const { email } = req.body;
+
+  await Subscriber.create({ email });
+
+  return res.render('thanks');
 });
 
 router.post('/greet', (req, res) => {
